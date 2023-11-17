@@ -1,0 +1,21 @@
+{
+  "applications": "*",
+  "changelogDate": "20231117225244",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "relationship",
+  "fields": [
+    {
+      "fieldName": "relationshipType",
+      "fieldType": "RelationshipType",
+      "fieldValues": "Father,Mother,Guardian"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Relationship",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

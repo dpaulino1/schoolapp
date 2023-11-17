@@ -1,0 +1,97 @@
+
+
+
+entity SchoolInfo{
+    schoolName String maxlength(80) required
+    address String maxlength(80) required
+    phoneNumber String  required
+    email String
+    principalName String
+    schoolDescription String 
+}
+
+entity Student{
+    
+    firstName String maxlength(40) required
+	lastName String maxlength(40) required
+    dateOfBirth LocalDate
+    gender String minlength(1) maxlength(1)
+	phoneNumber String
+	address String
+}
+
+entity Relationship{
+  //- Student_ID (Foreign Key referencing the Students table)
+  // - Parent_ID (Foreign Key referencing the Parents table)
+  relationshipType  RelationshipType//(e.g., Father, Mother, Guardian)
+ }
+ 
+enum RelationshipType {
+Father, Mother, Guardian
+}
+
+entity Teacher {
+
+	firstName String maxlength(40) required
+	lastName String maxlength(40) required
+	email String
+	phoneNumber String
+    dateOfBirth LocalDate
+    gender String minlength(1) maxlength(1)
+
+}
+entity Subject{
+//        Subject_ID (Primary Key)
+        subjectName String maxlength(40) required
+        description String maxlength(255) 
+}        
+//entity TeacherSubjects {
+//    - TeacherSubject_ID (Primary Key)
+//    - Teacher_ID (Foreign Key referencing the Teachers table)
+//   - Subject_ID (Foreign Key referencing the Subjects table)
+//}
+
+entity Parent {
+
+	firstName String maxlength(40) required
+	lastName String maxlength(40) required
+	email String
+    dateOfBirth LocalDate
+    gender String minlength(1) maxlength(1)
+	phoneNumber String
+	address String
+    
+}
+
+entity Grade{
+ description String maxlength(40) 
+}
+
+//relationship ManyToMany {
+//	Teacher{subject} to Subject{teacher},
+ //   Student{parent} to Parent{student}
+//}
+
+// defining multiple OneToMany relationships with comments
+//relationship OneToMany {
+//Parent to Relationship,
+//Student to Relationship,
+//Teacher to Subject,
+//Subject to Teacher
+
+//}
+
+
+
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
