@@ -1,0 +1,1 @@
+org.springframework.test.context.ContextCustomizerFactory = com.grupo4.config.TestContainersSpringContextCustomizerFactory
